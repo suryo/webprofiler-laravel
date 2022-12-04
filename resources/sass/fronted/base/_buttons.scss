@@ -1,0 +1,76 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+.btn,
+a.btn {
+    letter-spacing: .025em;
+}
+
+.light-scheme {
+    color: var(--light-main-color);
+    .btn,
+    a.btn {
+        border: 0px;
+        color: var(--light-back-main-color);
+        background: var(--light-accent-color);
+    }
+    a,
+    button {
+        color: var(--light-head-color);
+        &:hover {
+            color: var(--light-accent-color);
+        }
+    }
+    .btn:hover,
+    a.btn:hover {
+        border: 0px;
+        color: var(--light-back-main-color);
+        background: var(--light-accent-hover-color);
+    }
+    .btn.btn-outline,
+    a.btn.btn-outline {
+        border: 1px solid var(--light-head-color);
+        color: var(--light-head-color);
+        background: transparent;
+    }
+    .btn.btn-outline:hover,
+    a.btn.btn-outline:hover {
+        border: 1px solid var(--light-accent-color);
+        color: var(--light-back-main-color);
+        background: var(--light-accent-color);
+    }
+}
+
+.dark-scheme {
+    color: var(--dark-main-color);
+    .btn,
+    a.btn {
+        border: 0px;
+        color: var(--dark-back-main-color);
+        background: var(--dark-accent-color);
+    }
+    a,
+    button {
+        color: var(--dark-head-color);
+        &:hover {
+            color: var(--dark-accent-color);
+        }
+    }
+    .btn:hover,
+    a.btn:hover {
+        border: 0px;
+        color: var(--dark-back-main-color);
+        background: var(--dark-accent-hover-color);
+    }
+    .btn.btn-outline,
+    a.btn.btn-outline {
+        border: 1px solid var(--dark-head-color);
+        color: var(--dark-head-color);
+        background: transparent;
+    }
+    .btn.btn-outline:hover,
+    a.btn.btn-outline:hover {
+        border: 1px solid var(--dark-accent-color);
+        color: var(--dark-back-main-color);
+        background: var(--dark-accent-color);
+    }
+}

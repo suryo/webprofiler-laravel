@@ -1,0 +1,92 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.services {
+    .carousel-nav {
+        button {
+            width: 55px;
+            height: 55px;
+            line-height: 50px;
+            background: transparent;
+            svg {
+                width: 20px;
+            }
+        }
+    }
+    .services-content .item {
+        i {
+            font-size: 3em;
+        }
+        .service-desc,
+        .service-info {
+            font-size: .95em;
+        }
+    }
+    &.light-scheme {
+        .carousel-nav {
+            button {
+                border: 1px solid var(--light-head-color);
+                svg {
+                    fill: var(--light-head-color);
+                }
+                &:hover {
+                    background: var(--light-accent-color);
+                    border: 1px solid var(--light-accent-color);
+                    svg {
+                        fill: var(--light-back-main-color);
+                    }
+                }
+            }
+        }
+        .services-content .item {
+            background: var(--light-back-main-color);
+            border: 1px solid rgba(var(--light-main-color-rgb), .25);
+            .service-info {
+                color: var(--light-head-color);
+            }
+            &:hover {
+                background: var(--light-accent-color);
+                border: 1px solid var(--light-accent-color);
+                i,
+                h3,
+                p,
+                ul li {
+                    color: var(--light-back-main-color);
+                }
+            }
+        }
+    }
+    &.dark-scheme {
+        .carousel-nav {
+            button {
+                border: 1px solid var(--dark-head-color);
+                svg {
+                    fill: var(--dark-head-color);
+                }
+                &:hover {
+                    background: var(--dark-accent-color);
+                    border: 1px solid var(--dark-accent-color);
+                    svg {
+                        fill: var(--dark-back-main-color);
+                    }
+                }
+            }
+        }
+        .services-content .item {
+            background: var(--dark-back-main-color);
+            border: 1px solid rgba(var(--dark-main-color-rgb), .25);
+            .service-info {
+                color: var(--dark-head-color);
+            }
+            &:hover {
+                background: var(--dark-accent-color);
+                border: 1px solid var(--dark-accent-color);
+                i,
+                h3,
+                p,
+                ul li {
+                    color: var(--dark-back-main-color);
+                }
+            }
+        }
+    }
+}

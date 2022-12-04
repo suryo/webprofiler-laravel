@@ -1,0 +1,45 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.homepage {
+    .messages {
+        h2 {
+            font-size: 3.5em;
+            word-break: break-word;
+            @include m.phone {
+                font-size: 4.35em;
+            }
+            @include m.phone_min {
+                word-break: initial;
+            }
+            span.underlined {
+                position: relative;
+                white-space: pre;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    z-index: -1;
+                    bottom: 10%;
+                    left: 0;
+                    width: 100%;
+                    height: 25%;
+                    opacity: 0.3;
+                }
+            }
+        }
+        &>div {
+            display: none;
+        }
+    }
+    &.light-scheme .messages h2 {
+        color: var(--light-head-color);
+        span.underlined:after {
+            background: var(--light-head-color);
+        }
+    }
+    &.dark-scheme .messages h2 {
+        color: var(--dark-head-color);
+        span.underlined:after {
+            background: var(--dark-head-color);
+        }
+    }
+}

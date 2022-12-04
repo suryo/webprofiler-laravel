@@ -1,0 +1,44 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.cookies-message {
+    position: fixed;
+    z-index: 1001;
+    bottom: 20px;
+    left: 0px;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    a {
+        font-weight: 900;
+        text-decoration: none;
+    }
+    ul {
+        list-style-type: circle;
+    }
+    ul ul,
+    ol ul {
+        list-style-type: disc;
+    }
+    &.boxed-right {
+        right: 0px;
+        left: initial;
+    }
+    @include m.tablet {
+        &.boxed-left,
+        &.boxed-right {
+            width: 50%;
+        }
+    }
+    @include m.desktop {
+        &.boxed-left,
+        &.boxed-right {
+            width: 35%;
+        }
+    }
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        bottom: 0px;
+    }
+}

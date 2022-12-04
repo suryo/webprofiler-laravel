@@ -1,0 +1,66 @@
+.installer {
+    height: 100vh;
+    background-image: url("../../../../assets/admin/img/admin_back.jpg");
+    background-position: center center;
+    background-size: cover;
+    .step {
+        list-style: none;
+        .divider {
+            user-select: none;
+            width: 60px;
+            height: 3px;
+            &:first-child,
+            &:last-child {
+                flex: 1 0 auto;
+            }
+        }
+        .item {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            &.active {
+                background-color: #5e3aee !important;
+                &~.divider,
+                &~.item {
+                    background-color: #5e3aee !important;
+                }
+            }
+        }
+    }
+    .main {
+        form {
+            max-width: 750px;
+        }
+        .list {
+            list-style: none;
+            columns: 2;
+            .error {
+                font-size: 1em;
+                width: auto;
+            }
+        }
+    }
+    .spinner-rotate {
+        animation-name: spin;
+        animation-duration: 4000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        font-size: 2.5em;
+        position: absolute;
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    }
+    .hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .animate {
+        transition: all .3s;
+    }
+}

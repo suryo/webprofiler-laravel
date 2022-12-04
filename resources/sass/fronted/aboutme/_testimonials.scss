@@ -1,0 +1,130 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.testimonials {
+    position: relative;
+    .testimonials-messages {
+        .testimonial-content {
+            padding: 3rem;
+            @include m.tablet {
+                padding: 4rem;
+            }
+            border-radius: 4rem;
+            position: relative;
+            .comment {
+                font-size: 1.875em;
+                line-height: 1.2;
+                @include m.phone {
+                    line-height: 1.35em;
+                }
+            }
+            &>svg.comment-quotes {
+                max-width: 50px;
+            }
+            &.light-scheme {
+                box-shadow: 0 0rem 1rem rgba(var(--light-head-color-rgb), 0.1) !important;
+                svg.comment-quotes {
+                    fill: var(--light-head-color);
+                }
+                .comment {
+                    color: var(--light-head-color);
+                }
+                .comments-arrows button {
+                    svg {
+                        fill: var(--light-head-color);
+                    }
+                    &:hover svg {
+                        fill: var(--light-accent-color);
+                    }
+                }
+                svg.waves {
+                    fill: url(#light-waves-testimonial) var(--light-accent-color);
+                }
+            }
+            &.dark-scheme {
+                box-shadow: 0 0rem 1rem rgba(var(--dark-head-color-rgb), 0.1) !important;
+                svg.comment-quotes {
+                    fill: var(--dark-head-color);
+                }
+                .comment {
+                    color: var(--dark-head-color);
+                }
+                .comments-arrows button {
+                    svg {
+                        fill: var(--dark-head-color);
+                    }
+                    &:hover svg {
+                        fill: var(--dark-accent-color);
+                    }
+                }
+                svg.waves {
+                    fill: url(#dark-waves-testimonial) var(--dark-accent-color);
+                }
+            }
+            .comments-arrows {
+                button {
+                    svg {
+                        width: 40px;
+                    }
+                    &:hover svg {
+                        transform: scale(1.3);
+                    }
+                }
+            }
+            svg.waves {
+                position: absolute;
+                bottom: 25px;
+                right: 25px;
+                width: 100px;
+                height: 90px;
+                @include m.tablet {
+                    bottom: 50px;
+                    right: -50px;
+                    width: 150px;
+                }
+            }
+        }
+        .testimonial-image {
+            height: 100%;
+            margin-right: -30px;
+            border-top-left-radius: 4rem;
+            border-bottom-left-radius: 4rem;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center bottom;
+            position: relative;
+            .testimonial-images-quotes {
+                width: 150px;
+                position: absolute;
+                top: -50px;
+                left: -50px;
+                z-index: 100;
+                transform: rotate(180deg);
+            }
+            &.light-scheme {
+                background-color: var(--light-back-secondary-color);
+                .testimonial-images-quotes {
+                    fill: var(--light-accent-color);
+                }
+            }
+            &.dark-scheme {
+                background-color: var(--dark-back-secondary-color);
+                .testimonial-images-quotes {
+                    fill: var(--dark-accent-color);
+                }
+            }
+        }
+        &>div>div:last-child {
+            z-index: 10;
+        }
+    }
+}
+
+#light-waves-testimonial {
+    --color-stop-1: var(--light-accent-color);
+    --color-stop-2: var(--light-back-main-color);
+}
+
+#dark-waves-testimonial {
+    --color-stop-1: var(--dark-accent-color);
+    --color-stop-2: var(--dark-back-main-color);
+}

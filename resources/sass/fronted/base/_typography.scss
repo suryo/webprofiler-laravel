@@ -1,0 +1,95 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+h1,
+h2,
+h3,
+h4,
+h5,
+.header-font {
+    font-family: var(--heading-font);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 4em;
+    letter-spacing: 0.025em;
+}
+
+h2 {
+    font-size: 2.625em;
+    letter-spacing: 0.025em;
+}
+
+h3 {
+    font-size: 1.44em;
+    letter-spacing: 0.025em;
+}
+
+h4 {
+    font-size: 1.125em;
+    line-height: 1.1em;
+    @include m.phone {
+        line-height: initial;
+    }
+}
+
+.fnt-small {
+    font-size: .875em;
+}
+
+h5 {
+    font-size: 1.25em;
+    @include m.tablet {
+        font-size: .875em;
+    }
+}
+
+.light-scheme {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: var(--light-head-color);
+    }
+    .accent-color,
+    &.accent-color {
+        color: var(--light-accent-color);
+    }
+    .main-color,
+    &.main-color {
+        color: var(--light-main-color);
+    }
+}
+
+.dark-scheme {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: var(--dark-head-color);
+    }
+    .accent-color,
+    &.accent-color {
+        color: var(--dark-accent-color);
+    }
+    .main-color,
+    &.main-color {
+        color: var(--dark-main-color);
+    }
+}
+
+i {
+    &.h1,
+    &.h2,
+    &.h3,
+    &.h4,
+    &.h5 {
+        font-weight: 700;
+    }
+}
+
+.fnt-bold {
+    font-weight: 700;
+}

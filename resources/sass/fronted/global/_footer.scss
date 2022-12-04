@@ -1,0 +1,86 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+footer {
+    position: relative;
+    a {
+        border: 0px;
+        &.toTop {
+            font-size: 1.25em;
+            z-index: 100;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            margin-top: 2rem;
+            position: absolute;
+            left: 50%;
+            margin-left: -18px !important;
+            bottom: 25px;
+            @include m.phone {
+                margin-top: 0rem;
+                bottom: 50px;
+                right: 20px;
+                margin-left: 0px !important;
+                left: inherit;
+                width: 54px;
+                height: 54px;
+                line-height: 54px;
+            }
+        }
+    }
+    &.light-scheme {
+        a {
+            color: var(--light-head-color);
+            &:hover {
+                color: var(--light-accent-color);
+            }
+            &.toTop {
+                border: 1px solid var(--light-head-color);
+                color: var(--light-head-color);
+                &:hover {
+                    border: 1px solid var(--light-accent-color);
+                    color: var(--light-back-main-color);
+                    background: var(--light-accent-color);
+                }
+            }
+        }
+        .social-icons a {
+            color: var(--light-main-color);
+            &:hover {
+                color: var(--light-accent-color);
+            }
+        }
+    }
+    &.dark-scheme {
+        a {
+            color: var(--dark-head-color);
+            &:hover {
+                color: var(--dark-accent-color);
+            }
+            &.toTop {
+                color: var(--dark-head-color);
+                border: 1px solid var(--dark-head-color);
+                &:hover {
+                    background: var(--dark-accent-color);
+                    color: var(--dark-back-main-color);
+                    border: 1px solid var(--dark-accent-color);
+                }
+            }
+        }
+        .social-icons a {
+            color: var(--dark-main-color);
+            &:hover {
+                color: var(--dark-accent-color);
+            }
+        }
+    }
+    .copyright a {
+        border: 0px;
+        padding: 0px;
+        text-decoration: none;
+        font-weight: 700;
+        &:hover {
+            background: none;
+            border: 0px;
+        }
+    }
+}

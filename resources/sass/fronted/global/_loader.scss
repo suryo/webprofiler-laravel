@@ -1,0 +1,52 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1100;
+    #loader-content {
+        border-radius: 50%;
+        position: fixed;
+        z-index: 9999;
+        top: 50%;
+        left: 50%;
+        margin-left: -80px;
+        margin-top: -80px;
+        width: 160px;
+        height: 160px;
+        .loader-logo,
+        #loader-circle {
+            position: absolute;
+        }
+        .loader-logo {
+            top: 50%;
+            left: 50%;
+            font-size: 7em;
+            line-height: 1em;
+            transform: translate(-50%, -50%);
+        }
+        img.loader-image {
+            position: absolute;
+            z-index: 100;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90px
+        }
+    }
+}
+
+.light-cheme {
+    .loader-logo {
+        color: var(--light-accent-color);
+    }
+}
+
+.dark-cheme {
+    .loader-logo {
+        color: var(--dark-accent-color);
+    }
+}

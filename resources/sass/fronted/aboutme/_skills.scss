@@ -1,0 +1,267 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.skills {
+    span {
+        font-size: 1.6em;
+        vertical-align: -20%;
+        margin-right: 15px;
+    }
+    .bar-graph {
+        position: relative;
+        margin-bottom: 25px;
+        .main-layer {
+            height: 7px;
+            position: relative;
+            z-index: 1;
+        }
+        .percent-layer {
+            height: 7px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+    }
+    .bar {
+        position: relative;
+        padding-right: 100px;
+        .bar-percentage {
+            position: absolute;
+            font-size: 3.125em;
+            opacity: .25;
+            font-family: var(--heading-font);
+            font-weight: 700;
+            right: 0px;
+            top: 60%;
+            transform: translateY(-50%);
+            width: 100px;
+        }
+        &:hover .bar-percentage {
+            opacity: 1;
+        }
+    }
+    .easyPieChart {
+        position: relative;
+        text-align: center;
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .pie-chart {
+        padding: 0px;
+        float: left;
+        position: relative;
+        margin-right: 2rem;
+        &:last-child {
+            margin-right: 0rem;
+        }
+        .percentage,
+        .percentage-title {
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            line-height: initial;
+        }
+        .percentage {
+            top: 35%;
+            @include m.tablet {
+                top: 45%;
+            }
+            font-family: var(--heading-font);
+            font-weight: 700;
+            transform: translateY(-50%);
+        }
+        .percentage-title {
+            bottom: 30%;
+            @include m.tablet {
+                bottom: -20%;
+            }
+        }
+    }
+    .timeline {
+        .lines {
+            width: 70px;
+            .dot {
+                width: 20px;
+                height: 20px;
+                background: #d1d6e6;
+            }
+            .line {
+                width: 8px;
+                height: 100px;
+            }
+        }
+        .cards {
+            margin-left: 60px;
+            position: relative;
+            &:after {
+                position: absolute;
+                content: '';
+                width: 7px;
+                height: 100%;
+                top: 0px;
+                left: -42px;
+                z-index: 100;
+            }
+            .card {
+                border-radius: 20px;
+                .card-date {
+                    font-size: 1em;
+                    @include m.tablet {
+                        font-size: .875em;
+                    }
+                }
+                .card-text {
+                    line-height: initial;
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    z-index: 101;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: -50px;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+    &.light-scheme {
+        .bar-graph {
+            .main-layer {
+                background-color: var(--light-back-secondary-color);
+            }
+            .general_bg {
+                background-color: var(--light-accent-color);
+            }
+        }
+        .bar {
+            .bar-percentage {
+                color: var(--light-accent-color);
+            }
+            &:hover p {
+                color: var(--light-accent-color);
+            }
+        }
+        .pie-chart {
+            h2 {
+                color: var(--light-head-color);
+            }
+            &:hover {
+                h2,
+                p {
+                    color: var(--light-accent-color);
+                }
+            }
+        }
+        .timeline {
+            .lines {
+                .dot {
+                    background-color: var(--light-main-color);
+                }
+                .line {
+                    background-color: var(--light-back-secondary-color);
+                }
+            }
+            .cards {
+                &:after {
+                    background: var(--light-back-secondary-color);
+                }
+                .card {
+                    &.border {
+                        background: var(--light-back-main-color);
+                        border-color: var(--light-back-secondary-color) !important;
+                    }
+                    &.shadow {
+                        box-shadow: 0 0rem 1rem rgba(var(--light-head-color-rgb), 0.1) !important;
+                    }
+                    &:hover {
+                        border-color: var(--light-accent-color) !important;
+                        background: var(--light-accent-color) !important;
+                        color: var(--light-back-main-color) !important;
+                        h4 {
+                            color: var(--light-back-main-color);
+                        }
+                        &:after {
+                            background: var(--light-accent-color);
+                        }
+                    }
+                    &:after {
+                        background: var(--light-main-color);
+                    }
+                }
+            }
+        }
+    }
+    &.dark-scheme {
+        .bar-graph {
+            .main-layer {
+                background-color: var(--dark-back-secondary-color);
+            }
+            .general_bg {
+                background-color: var(--dark-accent-color);
+            }
+        }
+        .bar {
+            &:hover p {
+                color: var(--dark-accent-color);
+            }
+            .bar-percentage {
+                color: var(--dark-accent-color);
+            }
+        }
+        .pie-chart {
+            h2 {
+                color: var(--dark-head-color);
+            }
+            &:hover {
+                h2,
+                p {
+                    color: var(--dark-accent-color);
+                }
+            }
+        }
+        .timeline {
+            .lines {
+                .dot {
+                    background-color: var(--dark-main-color);
+                }
+                .line {
+                    background-color: var(--dark-back-secondary-color);
+                }
+            }
+            .cards {
+                &:after {
+                    background: var(--dark-back-secondary-color);
+                }
+                .card {
+                    &.border {
+                        background: var(--dark-back-main-color);
+                        border-color: var(--dark-back-secondary-color) !important;
+                    }
+                    &.shadow {
+                        box-shadow: 0 0rem 1rem rgba(var(--dark-head-color-rgb), 0.1) !important;
+                    }
+                    &:hover {
+                        border-color: var(--dark-accent-color) !important;
+                        background: var(--dark-accent-color) !important;
+                        color: var(--dark-back-main-color) !important;
+                        h4 {
+                            color: var(--dark-back-main-color);
+                        }
+                        &:after {
+                            background: var(--dark-accent-color);
+                        }
+                    }
+                    &:after {
+                        background: var(--dark-main-color);
+                    }
+                }
+            }
+        }
+    }
+}

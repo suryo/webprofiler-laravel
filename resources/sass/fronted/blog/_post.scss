@@ -1,0 +1,167 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.blog-post {
+    .post-hide {
+        border-radius: 25px;
+        background: none;
+        font-size: 1.5em;
+        z-index: 100;
+        font-size: 1em;
+        text-decoration: none;
+        svg {
+            width: 15px;
+            @include m.tablet {
+                width: 20px;
+            }
+        }
+    }
+    .post-info {
+        font-size: 1.2em;
+    }
+    .post-image {
+        background-position: center center;
+        clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+        .post-title-container {
+            background: rgba(0, 0, 0, .35);
+            padding-top: 4rem !important;
+            padding-bottom: 4rem !important;
+            @include m.desktop {
+                padding-top: 9rem !important;
+                padding-bottom: 9rem !important;
+            }
+        }
+    }
+    .post-media {
+        img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            @include m.tablet {
+                height: 350px;
+            }
+            @include m.desktop {
+                height: 450px;
+            }
+        }
+        .post-video {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%;
+            height: 200px;
+            @include m.tablet {
+                height: 260px;
+            }
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    @include m.tablet {
+        .container-media {
+            padding-top: 6rem !important;
+        }
+    }
+}
+
+.light-scheme {
+    .post-image {
+        h2,
+        p {
+            color: var(--light-back-main-color);
+        }
+        .post-hide {
+            border: 0px;
+            background: var(--light-back-main-color);
+            color: var(--light-head-color);
+            svg {
+                fill: var(--light-head-color);
+            }
+            &:hover {
+                border: 0px;
+                background: var(--light-accent-color);
+                color: var(--light-back-main-color);
+                svg {
+                    fill: var(--light-back-main-color);
+                }
+            }
+        }
+    }
+    .post-hide {
+        border: 1px solid var(--light-main-color);
+        color: var(--light-main-color);
+        svg {
+            fill: var(--light-main-color);
+        }
+        &:hover {
+            background: var(--light-accent-color);
+            border: 1px solid var(--light-accent-color);
+            color: var(--light-back-main-color);
+            svg {
+                fill: var(--light-back-main-color);
+            }
+        }
+    }
+    .post-quote {
+        color: var(--light-back-main-color);
+        background: url('../../../../assets/fronted/img/quote.png') var(--light-accent-color) top left no-repeat;
+        h3 {
+            font-size: 1.4em;
+            color: var(--light-back-main-color);
+        }
+    }
+}
+
+.dark-scheme {
+    .post-image {
+        h2,
+        p {
+            color: var(--dark-back-main-color);
+        }
+        .post-hide {
+            border: 0px;
+            background: var(--dark-back-main-color);
+            color: var(--dark-head-color);
+            svg {
+                fill: var(--dark-head-color);
+            }
+            &:hover {
+                border: 0px;
+                background: var(--dark-accent-color);
+                color: var(--dark-back-main-color);
+                svg {
+                    fill: var(--dark-back-main-color);
+                }
+            }
+        }
+    }
+    .post-hide {
+        border: 1px solid var(--dark-main-color);
+        color: var(--dark-main-color);
+        svg {
+            fill: var(--dark-main-color);
+        }
+        &:hover {
+            background: var(--dark-accent-color);
+            border: 1px solid var(--dark-accent-color);
+            color: var(--dark-back-main-color);
+            svg {
+                fill: var(--dark-back-main-color);
+            }
+        }
+    }
+    .post-quote {
+        color: var(--dark-back-main-color);
+        background: url('../../../../assets/fronted/img/quote_dark.png') var(--dark-accent-color) top left no-repeat;
+        h3 {
+            font-size: 1.4em;
+            color: var(--dark-back-main-color);
+        }
+    }
+}
