@@ -48,7 +48,7 @@
     @if ($section->projects_enable == 1 && count($projects)>0)
     <link href="{{ asset('assets/fronted/css/magnific-popup.css') }}" rel="stylesheet">
     @endif
-    <link href="{{ asset('public/assets/fronted/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/fronted/css/app.css') }}" rel="stylesheet">
 
     @if( !empty($general->image_favicon))
     <!-- FAVICONS -->

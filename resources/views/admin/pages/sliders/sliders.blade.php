@@ -67,7 +67,7 @@
                                                                             <div class="form-group">
                                                                                 <label class="form-label">{{ __('content.slider_image') }}</label>
                                                                                 <div class="d-flex p-3 mb-3 bg-gray-200 justify-content-center">
-                                                                                    <img src="{{asset('/')}}/uploads/img/image_default.png" class="img-fluid img-maxsize-200 previewImage_slider_image" />
+                                                                                    <img src="{{asset('/')}}uploads/img/image_default.png" class="img-fluid img-maxsize-200 previewImage_slider_image" />
                                                                                 </div>
                                                                                 <input class="form-control previewImage" type="file" name="slider_image" required/>
                                                                                 <div class="form-text">{{ __('content.image_requirements') }} 1024x768px</div>
@@ -353,7 +353,7 @@
                                     <span class="fw-normal fst-italic remove-image text-primary" data-target="image_video" data-url="{{asset('/')}}"><i class="fas fa-times mr-1"></i>{{ __('content.remove_image') }}</span>
                                 </label>
                                 <div class="d-flex p-3 mb-3 bg-gray-200 justify-content-center">
-                                    <img src="{{asset('/')}}/uploads/img/image_default.png" class="img-fluid img-maxsize-200 previewImage_image_video" />
+                                    <img src="{{asset('/')}}uploads/img/image_default.png" class="img-fluid img-maxsize-200 previewImage_image_video" />
                                 </div>
                                 <input class="form-control previewImage @error('image_video') is-invalid @enderror" type="file" name="image_video" value=""/>
                                 <div class="form-text d-flex justify-content-between">

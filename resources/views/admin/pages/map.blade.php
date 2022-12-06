@@ -112,7 +112,7 @@
                                             $imgIconUrl = ($map->icon_image != '') ? $map->icon_image : 'uploads/img/image_default.png';
                                         @endphp
                                         <div class="d-flex p-3 mb-2 bg-gray-200 justify-content-center">
-                                            <img src="{{asset('/')}}/@php echo $imgIconUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_icon_image" />
+                                            <img src="{{asset('/')}}@php echo $imgIconUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_icon_image" />
                                         </div>
                                         <input class="form-control previewImage @error('icon_image') is-invalid @enderror" type="file" name="icon_image" value=""/>
                                         <input type="hidden" name="icon_image_current" value="{{$map->icon_image}}" />

@@ -34,7 +34,7 @@
                                             $imgPersonalUrl = ($personal->image != '') ? $personal->image : 'uploads/img/image_default.png';
                                         @endphp
                                         <div class="d-flex p-3 mb-4 bg-gray-200 justify-content-center">
-                                            <img src="{{asset('/')}}/@php echo $imgPersonalUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_image_profile" />
+                                            <img src="{{asset('/')}}@php echo $imgPersonalUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_image_profile" />
                                         </div>
                                         <input class="form-control previewImage @error('image') is-invalid @enderror" type="file" name="image_profile" value=""/>
                                         <input type="hidden" name="image_profile_current" value="{{$personal->image}}" />

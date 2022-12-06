@@ -181,7 +181,7 @@
                                                                                 <div class="form-group">
                                                                                     <label class="form-label">{{ __('content.slider_image') }}</label>
                                                                                     <div class="d-flex p-3 mb-3 bg-gray-200 justify-content-center">
-                                                                                        <img src="{{asset('/')}}/uploads/img/image_default.png" class="img-fluid img-maxsize-200 previewImage_gallery_image" />
+                                                                                        <img src="{{asset('/')}}uploads/img/image_default.png" class="img-fluid img-maxsize-200 previewImage_gallery_image" />
                                                                                     </div>
                                                                                     <input class="form-control previewImage" type="file" name="gallery_image" required/>
                                                                                     <div class="form-text">{{ __('content.image_requirements') }}</div>

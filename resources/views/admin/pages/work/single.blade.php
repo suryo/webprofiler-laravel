@@ -62,7 +62,7 @@
                                                         $image_link = 'uploads/img/image_default.png';
                                                     endif;
                                                 @endphp
-                                                <img src="{{asset('/')}}/@php echo $image_link @endphp" class="img-fluid img-maxsize-200 previewImage_image" />
+                                                <img src="{{asset('/')}}@php echo $image_link @endphp" class="img-fluid img-maxsize-200 previewImage_image" />
                                             </div>
                                             <input class="form-control previewImage @error('image') is-invalid @enderror" type="file" name="image" value=""/>
                                             <input type="hidden" name="image_current" value="{{$project->image}}" />
@@ -182,7 +182,7 @@
                                                         $image_link_more_1 = 'uploads/img/image_default.png';
                                                     endif;
                                                 @endphp
-                                                <img src="{{asset('/')}}/@php echo $image_link_more_1 @endphp" class="img-fluid img-maxsize-200 previewImage_image_more_1" />
+                                                <img src="{{asset('/')}}@php echo $image_link_more_1 @endphp" class="img-fluid img-maxsize-200 previewImage_image_more_1" />
                                             </div>
                                             <input class="form-control previewImage @error('image_more_1') is-invalid @enderror" type="file" name="image_more_1" value=""/>
                                             <input type="hidden" name="image_more_1_current" value="{{$project->image_more_1}}" />

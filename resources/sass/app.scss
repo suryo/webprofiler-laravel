@@ -1,8 +1,7 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@use 'fronted/base';
+@use 'fronted/global';
+@use 'fronted/home';
+@use 'fronted/aboutme';
+@use 'fronted/works';
+@use 'fronted/blog';
+@use 'fronted/contact';

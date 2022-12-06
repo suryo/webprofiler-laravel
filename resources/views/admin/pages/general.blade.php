@@ -106,7 +106,7 @@
                                             $imgFaviconUrl = ($general->image_favicon != '') ? $general->image_favicon : 'uploads/img/image_default.png';
                                         @endphp
                                         <div class="d-flex p-3 mb-3 bg-gray-200 justify-content-center">
-                                            <img src="{{asset('/')}}/@php echo $imgFaviconUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_image_favicon" />
+                                            <img src="{{asset('/')}}@php echo $imgFaviconUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_image_favicon" />
                                         </div>
                                         <input class="form-control previewImage @error('image_favicon') is-invalid @enderror" type="file" name="image_favicon" value=""/>
                                         <input type="hidden" name="image_favicon_current" value="{{$general->image_favicon}}" />
@@ -129,7 +129,7 @@
                                             $imgHeaderUrl = ($general->image_logo_header_dark != '') ? $general->image_logo_header_dark : 'uploads/img/image_default.png';
                                         @endphp
                                         <div class="d-flex p-3 mb-3 bg-gray-200 justify-content-center">
-                                            <img src="{{asset('/')}}/@php echo $imgHeaderUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_image_logo_header_dark" />
+                                            <img src="{{asset('/')}}@php echo $imgHeaderUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_image_logo_header_dark" />
                                         </div>
                                         <input class="form-control previewImage @error('image_logo_header_dark') is-invalid @enderror" type="file" name="image_logo_header_dark" value=""/>
                                         <input type="hidden" name="image_logo_header_dark_current" value="{{$general->image_logo_header_dark}}" />
@@ -152,7 +152,7 @@
                                             $imgHeaderUrl = ($general->image_logo_header_light != '') ? $general->image_logo_header_light : 'uploads/img/image_default.png';
                                         @endphp
                                         <div class="d-flex p-3 mb-3 bg-gray-200 justify-content-center">
-                                            <img src="{{asset('/')}}/@php echo $imgHeaderUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_image_logo_header_light" />
+                                            <img src="{{asset('/')}}@php echo $imgHeaderUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_image_logo_header_light" />
                                         </div>
                                         <input class="form-control previewImage @error('image_logo_header_light') is-invalid @enderror" type="file" name="image_logo_header_light" value=""/>
                                         <input type="hidden" name="image_logo_header_light_current" value="{{$general->image_logo_header_light}}" />
@@ -278,7 +278,7 @@
                                             $imgLoaderUrl = ($general->image_logo_loader != '') ? $general->image_logo_loader : 'uploads/img/image_default.png';
                                         @endphp
                                         <div class="d-flex p-3 mb-3 bg-gray-200 justify-content-center">
-                                            <img src="{{asset('/')}}/@php echo $imgLoaderUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_image_logo_loader" />
+                                            <img src="{{asset('/')}}@php echo $imgLoaderUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_image_logo_loader" />
                                         </div>
                                         <input class="form-control previewImage @error('image_logo_loader') is-invalid @enderror" type="file" name="image_logo_loader" value=""/>
                                         <input type="hidden" name="image_logo_loader_current" value="{{$general->image_logo_loader}}" />

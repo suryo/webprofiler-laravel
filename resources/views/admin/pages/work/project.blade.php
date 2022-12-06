@@ -54,7 +54,7 @@
                                         <div class="form-group">
                                             <label for="image" class="form-label">{{ __('content.image') }}</label>
                                             <div class="d-flex p-3 mb-2 bg-gray-200 justify-content-center">
-                                                <img src="{{asset('/')}}/uploads/img/image_default.png" class="img-fluid img-maxsize-200 previewImage_image" />
+                                                <img src="{{asset('/')}}uploads/img/image_default.png" class="img-fluid img-maxsize-200 previewImage_image" />
                                             </div>
                                             <input class="form-control previewImage @error('image') is-invalid @enderror" type="file" name="image" value=""/>
                                             <div class="form-text d-flex justify-content-between">
@@ -153,7 +153,7 @@
                                                 <span class="fw-normal fst-italic remove-image text-primary" data-target="image_more_1" data-url="{{asset('/')}}"><i class="fas fa-times mr-1"></i>{{ __('content.remove_image') }}</span>
                                             </label>
                                             <div class="d-flex p-3 mb-2 bg-gray-200 justify-content-center">
-                                                <img src="{{asset('/')}}/uploads/img/image_default.png" class="img-fluid img-maxsize-200 previewImage_image_more_1" />
+                                                <img src="{{asset('/')}}uploads/img/image_default.png" class="img-fluid img-maxsize-200 previewImage_image_more_1" />
                                             </div>
                                             <input class="form-control previewImage @error('image_more_1') is-invalid @enderror" type="file" name="image_more_1" value=""/>
                                             <div class="form-text d-flex justify-content-between">
@@ -174,7 +174,7 @@
                                                 <span class="fw-normal fst-italic remove-image text-primary" data-target="image_more_2" data-url="{{asset('/')}}"><i class="fas fa-times mr-1"></i>{{ __('content.remove_image') }}</span>
                                             </label>
                                             <div class="d-flex p-3 mb-2 bg-gray-200 justify-content-center">
-                                                <img src="{{asset('/')}}/uploads/img/image_default.png" class="img-fluid img-maxsize-200 previewImage_image_more_2" />
+                                                <img src="{{asset('/')}}uploads/img/image_default.png" class="img-fluid img-maxsize-200 previewImage_image_more_2" />
                                             </div>
                                             <input class="form-control previewImage @error('image_more_2') is-invalid @enderror" type="file" name="image_more_2" value=""/>
                                             <div class="form-text d-flex justify-content-between">

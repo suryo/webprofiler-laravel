@@ -1,16 +1,16 @@
 @php
 $page_number = ($section->slider_enable == 1 && $slider != null) ? 2 : 1;
-// switch ($general->menu_position) {
-//     case 'left':
+switch ($general->menu_position) {
+    case 'left':
         $margin_css = "me-auto ms-5";
-    //     break;
-    // case 'right':
+        break;
+    case 'right':
         $margin_css = "ms-auto me-5";
-        // break;
-    // default:
-        //$margin_css = "";
-//         break;
-// }
+        break;
+    default:
+        $margin_css = "";
+        break;
+}
 @endphp
 
 <nav id="mainNav" class="navbar navbar-expand-lg align-items-center css3animate fnt-bold" role="navigation">

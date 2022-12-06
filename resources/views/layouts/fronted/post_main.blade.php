@@ -32,7 +32,7 @@
     @include('fronted.styles')
     <link href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/fronted/css/animate.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/fronted/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/assets/fronted/css/app.css') }}" rel="stylesheet">
 
     @if( !empty($general->image_favicon))
     <!-- FAVICONS -->

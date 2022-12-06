@@ -32,7 +32,7 @@
     @endif
     
     {{-- NAVBAR --}}
-    {{-- @include('fronted.sections.navbar') --}}
+    @include('fronted.sections.navbar')
 
     {{-- SLIDER --}}
     @if ($section->slider_enable == 1 && $slider != null)

@@ -139,7 +139,7 @@
                                                     $imgSkillsUrl = ($section->skills_background != '') ? $section->skills_background : 'uploads/img/image_default.png';
                                                 @endphp
                                                 <div class="d-flex p-3 mb-2 bg-gray-200 justify-content-center">
-                                                    <img src="{{asset('/')}}/@php echo $imgSkillsUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_skills_background" />
+                                                    <img src="{{asset('/')}}@php echo $imgSkillsUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_skills_background" />
                                                 </div>
                                                 <input class="form-control previewImage @error('skills_background') is-invalid @enderror" type="file" name="skills_background" value=""/>
                                                 <input type="hidden" name="skills_background_current" value="{{$section->skills_background}}" />
@@ -205,7 +205,7 @@
                                                     $imgTestimonialUrl = ($section->testimonial_background != '') ? $section->testimonial_background : 'uploads/img/image_default.png';
                                                 @endphp
                                                 <div class="d-flex p-3 mb-2 bg-gray-200 justify-content-center">
-                                                    <img src="{{asset('/')}}/@php echo $imgTestimonialUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_testimonial_background" />
+                                                    <img src="{{asset('/')}}@php echo $imgTestimonialUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_testimonial_background" />
                                                 </div>
                                                 <input class="form-control previewImage @error('testimonial_background') is-invalid @enderror" type="file" name="testimonial_background" value=""/>
                                                 <input type="hidden" name="testimonial_background_current" value="{{$section->testimonial_background}}" />
@@ -281,7 +281,7 @@
                                                     $imgServicesUrl = ($section->services_background != '') ? $section->services_background : 'uploads/img/image_default.png';
                                                 @endphp
                                                 <div class="d-flex p-3 mb-2 bg-gray-200 justify-content-center">
-                                                    <img src="{{asset('/')}}/@php echo $imgServicesUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_services_background" />
+                                                    <img src="{{asset('/')}}@php echo $imgServicesUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_services_background" />
                                                 </div>
                                                 <input class="form-control previewImage @error('services_background') is-invalid @enderror" type="file" name="services_background" value=""/>
                                                 <input type="hidden" name="services_background_current" value="{{$section->services_background}}" />
@@ -369,7 +369,7 @@
                                                 $imgProjectsUrl = ($section->projects_background != '') ? $section->projects_background : 'uploads/img/image_default.png';
                                             @endphp
                                             <div class="d-flex p-3 mb-2 bg-gray-200 justify-content-center">
-                                                <img src="{{asset('/')}}/@php echo $imgProjectsUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_projects_background" />
+                                                <img src="{{asset('/')}}@php echo $imgProjectsUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_projects_background" />
                                             </div>
                                             <input class="form-control previewImage @error('projects_background') is-invalid @enderror" type="file" name="projects_background" value=""/>
                                             <input type="hidden" name="projects_background_current" value="{{$section->projects_background}}" />
@@ -454,7 +454,7 @@
                                                 $imgBlogUrl = ($section->blog_background != '') ? $section->blog_background : 'uploads/img/image_default.png';
                                             @endphp
                                             <div class="d-flex p-3 mb-2 bg-gray-200 justify-content-center">
-                                                <img src="{{asset('/')}}/@php echo $imgBlogUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_blog_background" />
+                                                <img src="{{asset('/')}}@php echo $imgBlogUrl; @endphp" class="img-fluid img-maxsize-200 previewImage_blog_background" />
                                             </div>
                                             <input class="form-control previewImage @error('blog_background') is-invalid @enderror" type="file" name="blog_background" value=""/>
                                             <input type="hidden" name="blog_background_current" value="{{$section->blog_background}}" />
